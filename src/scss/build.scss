@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --primary-color: #222;
+}
+
+
+$primary-color: #333;
+$secondry: #fff; 
+$addinational: grey;
+
+$font-title: 24px;
+$family: 'Open Sans', sans-serif;
+
+$ratio: 10;
+
+@media (max-width: 991px){
+  $font-title: 12px; 
+}
+
+body{
+  font-family: $family; 
+  font-weight: bold;
+  color: var(--primary-color);
+  color: $primary-color;
+}
+
+
+
+.welcome{
+  position: relative;
+  display: flex;
+  height: 100vh;
+  background: url(https://adijuhpalace.ru/800/600/https/www.publicdomainpictures.net/pictures/120000/velka/new-york-city-skyline-view-1425479847Lo7.jpg) no-repeat center;
+  background-size: cover;
+  @media (max-width: 991px){
+    
+  }
+  .column{
+    width: 100% / $ratio;
+    height: 100px * 5.5;
+  }
+  h1{
+    text-align: center;
+    font-size: $font-title;
+    color: $primary-color;
+    @media (max-width: 991px){
+      text-align: right;
+    }
+    p{
+      a{
+        b{
+          color: $primary-color;
+        }
+      }
+    }
+  } 
+}
+
+.heading{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.welcome-heading{
+  @extend .heading;
+  text-align: right;
+  color: #000;
+}
+
+
+
+.welcome-heading{
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: right;
+  color: #000;
+}
+
+button{
+  background-color: $primary-color;
+}
+
+
+@mixin text() {
+  font-weight: bold; 
+  text-transform: uppercase;
+}
+
+@mixin image($width, $height) {
+  display: block;
+  width: $width;
+  height: $height;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 10px;
+}
+
+.image-1{
+  @include image(100px, 100px);
+}
+.image-2{
+  @include image(200px, 100px);
+}
+.image-3{
+  @include image(300px, 300px);
+}
+
+
